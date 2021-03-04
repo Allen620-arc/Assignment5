@@ -4,3 +4,6 @@
   Student Number: 11278995
   Instructor: Jeffrey Long
 """
+
+import Queue as Q
+
