@@ -5,5 +5,3 @@
   Instructor: Jeffrey Long
 """
 
-import Queue as Q
-
