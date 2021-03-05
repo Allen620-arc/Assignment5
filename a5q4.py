@@ -22,20 +22,20 @@ def sumnc(node_chain):
             :return: the sum of the data values in the node chain
     """
     if node_chain is None:
-        sum_of_nodes = 0
+        sum_of_values = 0
     else:
         # walk along the chain
         walker = node_chain
         value = walker.get_data()
-        sum_of_nodes = value
-        # print the data
-        while walker is None:
+        sum_of_values = value
+        while walker is not None:
             walker = walker.get_next()
-            value = walker.get_data()
-            sum_of_nodes += value
-            # represent the next with an arrow-like figure
-        # at the end of the chain, use '/'
-    return sum_of_nodes
+            if walker is None:
+                break
+            else:
+                value = walker.get_data()
+                sum_of_values += value
+    return sum_of_values
 
 
 def count_in(node_chain, value):

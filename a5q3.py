@@ -7,6 +7,7 @@
 
 import node as N
 
+
 def to_string(node_chain):
     """
     Purpose:
