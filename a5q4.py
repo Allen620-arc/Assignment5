@@ -77,4 +77,13 @@ def replace_in(node_chain, target, replacement):
     Return:
         None
     """
+    # walk along the chain
+    if node_chain is None:
+        return "EMPTY"
+    else:
+        walker = node_chain
+        while walker is not None:
+            if walker.get_data() == target:
+                walker.set_data(replacement)
+            walker = walker.get_next()
     return None
