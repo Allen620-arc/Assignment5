@@ -48,7 +48,19 @@ def count_in(node_chain, value):
     Return:
         :return: The number times the value appears in the node chain
     """
-    return None
+    num_count = 0
+    if node_chain is None:
+        num_count = 0
+    else:
+        # walk along the chain
+        walker = node_chain
+        while walker is not None:
+            if walker.get_data() == value:
+                num_count += 1
+                walker = walker.get_next()
+            else:
+                walker = walker.get_next()
+    return num_count
 
 
 def replace_in(node_chain, target, replacement):
